@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="commons/header :: header" />
+<body>
+    <style>
+        form {
+            width: 20em;
+            margin-left: 2em;
+            margin-top: .8em;
+        }
+        #divCheck, #botonEnviar {
+            margin-top: .5em;
+        }
+    </style>
+    <form action="editNoticia" method="post">
+        <div class="mb-6">
+            <label for="codigo" class="form-label" th:text="#{noticia.codigo}"></label>
+            <input type="text" class="form-control" id="codigo" name="codigo" th:value="${noticias.codigo}">
+        </div>
+        <div class="mb-6">
+            <label for="nombre" class="form-label" th:text="#{noticia.titular}"></label>
+            <input type="text" class="form-control" id="titular" name="titular" th:value="${noticias.titular}">
+        </div>
+        <div class="mb-6">
+            <label for="apellidos" class="form-label" th:text="#{noticia.descripcion}"></label>
+            <input type="text" class="form-control" id="descripcion" name="descripcion" th:value="${noticias.descripcion}">
+        </div>
+            <input type="submit" value="moficiar Noticia" id="botonEnviar">
+        </div>
+    </form>
+</body>
+</html>
