@@ -24,7 +24,7 @@ public class NoticiaController {
 
     @RequestMapping(value = "/listaNoticias")
     public ModelAndView list(HttpSession session,LoginUsuario usuario,Model model) {
-        if (usuario!=null && session!=null) {
+        if (usuario!=null) {
             session.setAttribute("usuario", usuario);
             model.addAttribute("usuario", usuario.getUsuario());
         }
